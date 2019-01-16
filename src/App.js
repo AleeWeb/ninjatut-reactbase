@@ -2,17 +2,31 @@ import React, { Component } from 'react';
 import { Ninjas } from  './Ninjas';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Main</h1>
+    constructor(props){
+      super(props);
 
-        <p>Welcome :)</p>
-      
-       <Ninjas />
-      </div>
-    );
-  }
+      this.state = {
+        name: 'Ryu',
+        Age: 30,
+        Belt: 'Black'
+      }
+    }
+    render() {
+      return (
+        <div>
+          <h1>Main</h1>
+
+          <p>Welcome :)</p>
+        
+        <Ninjas name="Ryu" age="25" belt="Red" />
+
+        <br/>
+
+        <Ninjas name="Yoshi" age="30" belt="Black" />
+
+        </div>
+      );
+    }
 }
 
 export default App;
