@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { Ninjas } from  './Ninjas';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h3>The Start</h3>
+        <h1>Main</h1>
+
+        <p>Welcome :)</p>
+      
+       <Ninjas />
       </div>
     );
   }
