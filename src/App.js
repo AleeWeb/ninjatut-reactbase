@@ -2,27 +2,21 @@ import React, { Component } from 'react';
 import { Ninjas } from  './Ninjas';
 
 class App extends Component {
-    constructor(props){
-      super(props);
-
-      this.state = {
-        name: 'Ryu',
-        Age: 30,
-        Belt: 'Black'
-      }
-    }
+  state = {
+    ninjas: [
+      {name:'Ryu', age: 30, belt: 'black', id: 1},
+      {name:'Yoshi', age: 20, belt: 'green', id: 2},
+      {name:'Crysyal', age: 25, belt: 'pink', id: 3}
+    ]
+  }
     render() {
       return (
         <div>
           <h1>Main</h1>
 
           <p>Welcome :)</p>
-        
-        <Ninjas name="Ryu" age="25" belt="Red" />
 
-        <br/>
-
-        <Ninjas name="Yoshi" age="30" belt="Black" />
+        <Ninjas ninjas={this.state.ninjas} />
 
         </div>
       );
