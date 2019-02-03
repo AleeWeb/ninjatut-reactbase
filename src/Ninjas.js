@@ -1,5 +1,9 @@
 import React from 'react';
 
+//Turn this into a Functional Component because the State is in the Class-Based App.js Root Component that is the Parent.
+// This functional component is only concerned with UI and how data displays. It's a DUMB Component!
+
+// Pass the props as a paramenter in Functional components. Class Based components use this.props.
 
 const Ninjas = ({ ninjas }) => { 
 
