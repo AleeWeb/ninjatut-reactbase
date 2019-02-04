@@ -15,6 +15,8 @@ class AddNinja extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();   // Prevents form refresh on the page.
+        this.props.addNinja(this.state)
+
        // console.log(this.state);
     }
     render() {
