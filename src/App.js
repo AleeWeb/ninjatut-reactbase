@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Ninjas from './Ninjas';
-import AddNinja from './AddNinja';
+import Ninjas from './Ninjas'
+import AddNinja from './AddNinja'
 
 class App extends Component {
   state = {
-    ninjas: [   // This state is an Array that contains different objects { }
+    ninjas: [ // The State Object contains this Array that contains different objects { } inside
       { name: 'Ryu', age: 30, belt: 'black', id: 1 },
       { name: 'Yoshi', age: 20, belt: 'green', id: 2 },
-      { name: 'Crysyal', age: 25, belt: 'pink', id: 3 }
+      { name: 'Crystal', age: 25, belt: 'pink', id: 3 }
     ]
   }
 
@@ -18,24 +18,17 @@ class App extends Component {
     ninja.id = Math.random();
 
     //Copy the current State array and add the new Ninjas from the form in AddNinja.js
-
-    let ninjas = [...this.state.ninjas, ninja]  // ... is spreading the state array above to put individual objects in the new copied array
+    let ninjas = [...this.state.ninjas, ninja]; // ... is spreading the state array above to put individual objects in the new copied array
     this.setState({
       ninjas: ninjas
-    })
+    });
   }
-
   render() {
     return (
-      <div>
-        <h1>Main</h1>
-
-        <p>Welcome :)</p>
-        {/* Pass the State Array object "ninjas" as a prop (ninjas=) to the Ninjas component. */}
-        <Ninjas ninjas={this.state.ninjas} />
-
-        <AddNinja addNinja={this.UNSAFE_componentWillMount.addNinja} />
-
+      <div className="App">
+        <h1>My first React app</h1>
+        <Ninjas ninjas={this.state.ninjas}/>
+        <AddNinja addNinja={this.addNinja} />  {/*Passing a Function as a Prop.*/}
       </div>
     );
   }
